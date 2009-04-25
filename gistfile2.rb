@@ -6,4 +6,4 @@ use Warden::Manager do |manager|
   manager.failure_app = LoginManager
 end
 
-run UserManagement
+run LoginManager
