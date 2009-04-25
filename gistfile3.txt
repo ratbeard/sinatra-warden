@@ -1,3 +1,4 @@
+class UserManagement < Sinatra::Default
   get '/unauthenticated/?' do
     view :login
   end
@@ -15,3 +16,4 @@
     env['warden'].logout
     redirect '/'
   end
+end
