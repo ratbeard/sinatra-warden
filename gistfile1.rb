@@ -11,3 +11,7 @@ Warden::Strategies.add(:password) do
     u.nil? ? fail!("Could not log in") : success!(u)
   end
 end
+
+Warden::Manager.before_failure do |env,opts|
+  env['rack.method'] = "GET"
+end
