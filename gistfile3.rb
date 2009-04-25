@@ -9,7 +9,7 @@ class LoginManager < Sinatra::Default
   end
   
   post '/login/?' do
-    env['warden'].authenticate!(:password)
+    env['warden'].authenticate!
     redirect "/"
   end
   
