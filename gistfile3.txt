@@ -1,0 +1,17 @@
+  get '/unauthenticated/?' do
+    view :login
+  end
+
+  get '/login/?' do
+    view :login
+  end
+  
+  post '/login/?' do
+    env['warden'].authenticate!(:password)
+    redirect "/"
+  end
+  
+  get '/logout/?' do
+    env['warden'].logout
+    redirect '/'
+  end
