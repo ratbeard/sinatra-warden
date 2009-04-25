@@ -1,4 +1,4 @@
-require 'user_management'
+require 'login_management'
 
 use Rack::Session::Cookie
 use Warden::Manager do |manager|
