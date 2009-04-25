@@ -1,4 +1,4 @@
-class UserManagement < Sinatra::Default
+class LoginManager < Sinatra::Default
   post '/unauthenticated/?' do
     view :login
   end
