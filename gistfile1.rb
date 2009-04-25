@@ -13,5 +13,5 @@ Warden::Strategies.add(:password) do
 end
 
 Warden::Manager.before_failure do |env,opts|
-  env['rack.method'] = "GET"
+  env['REQUEST_METHOD'] = "GET"
 end
