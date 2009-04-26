@@ -1,4 +1,8 @@
 class LoginManager < Sinatra::Default
+  get "/" do
+    view :welcome
+  end
+
   post '/unauthenticated/?' do
     status 401
     view :login
