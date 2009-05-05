@@ -1,4 +1,4 @@
-class LoginManager < Sinatra::Default
+class LoginManager < Sinatra::Base
   get "/" do
     view :welcome
   end
