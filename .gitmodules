@@ -1,3 +1,9 @@
 [submodule "warden"]
 	path = vendor/warden
 	url = git://github.com/hassox/warden.git
+[submodule "vendor/sinatra"]
+	path = vendor/sinatra
+	url = git://github.com/sinatra/sinatra.git
+[submodule "vendor/rack"]
+	path = vendor/rack
+	url = git://github.com/chneukirchen/rack.git
