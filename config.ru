@@ -1,11 +1,14 @@
 pwd = File.dirname(__FILE__)
 
+## 
 $:.unshift "#{pwd}/vendor/sinatra/lib"
 require 'sinatra'
 
 $:.unshift "#{pwd}/vendor/warden/lib"
 require 'warden'
 
+## 
+require 'haml'
 
 ##                
 $:.unshift "#{pwd}/lib"

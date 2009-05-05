@@ -1,15 +1,18 @@
-class LoginManager < Sinatra::Base
+class LoginManager < Sinatra::Default   
+  use_in_file_templates!
+  
   get "/" do
-    view :welcome
+    # render :welcome
+    "hi"
   end
 
   post '/unauthenticated/?' do
     status 401
-    view :login
+    haml :login
   end
 
   get '/login/?' do
-    view :login
+    haml :login
   end
   
   post '/login/?' do
@@ -22,3 +25,12 @@ class LoginManager < Sinatra::Base
     redirect '/'
   end
 end
+
+
+__END__
+@@layout
+%h1 Title
+= yield
+
+@@login
+please login
