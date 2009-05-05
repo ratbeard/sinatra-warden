@@ -1,0 +1,3 @@
+[submodule "warden"]
+	path = vendor/warden
+	url = git://github.com/hassox/warden.git
